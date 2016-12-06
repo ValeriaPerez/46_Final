@@ -4,9 +4,17 @@ $(document).ready( function(){
 	renderHighlightedRecipes(recipesArray);
 	$('.js-back').hide();
 
+	//FUNCION PINTA PARRAFO 
+ 	printNews();
+
 });
 
 
+function printNews() {
+ 
+ $(".callout-news p").text("NUEVAS RECETAS");
+
+}
 /*
 * Función que se encarga de pintar TODAS las recetas que tengan 
 * marcado el atributo "highlighted" como TRUE
