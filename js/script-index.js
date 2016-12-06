@@ -21,6 +21,15 @@ function printNews() {
 */
 function renderHighlightedRecipes(recipesArray) {
 	console.log('Recipes: ', recipesArray);
+	//RECORRE
+	for ( var i = 0; i < recipesArray.length; i++ ) {
+ 		
+ 		var recipe = recipesArray[i];
+ 		if( recipe.highlighted == true ) {
+ 			
+ 			renderRecipe(recipe);
+ 		}
+ 	}
 }
 
 /*
