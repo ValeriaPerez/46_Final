@@ -40,6 +40,41 @@ function renderHighlightedRecipes(recipesArray) {
 */
 function renderRecipe(recipe) {
 	console.log('Voy a pintar la receta: ', recipe);
+
+	//VARIABLES PARA HTML
+ 	var aItem = $('<a class="item-recipe" href="#"></a>');
+  		  
+ 	var spanAttr = $('<span class="attribution"></span>');
+ 	
+ 	var spanTitle = $('<span class="title-recipe"></span>');
+ 	//AGREGA EL VALOR QUE TIENE TITULO
+ 	spanTitle.text(recipe.title);
+ 	
+ 	var spanMeta = $('<span class="metadata-recipe"></span>');
+ 	
+ 	var spanAuthor = $('<span class="author-recipe"></span>');
+ 	spanAuthor.text(recipe.source.name);
+ 	
+ 	var spanBook = $('<span class="bookmarks-recipe"></span>');
+ 	
+ 	var spanIcon = $('<span class="icon-bookmark"></span>');
+ 	spanIcon.text(recipe.cookTime);
+ 	
+ 	var imgUrl = $('<img/>');
+ 	imgUrl.attr('src', recipe.source.url);
+ 
+ 	//PINTA ETIQUETAS
+ 	aItem.append(spanAttr);
+ 	spanAttr.append(spanTitle);
+ 	spanAttr.append(spanMeta);
+ 	spanMeta.append(spanAuthor);
+ 	spanMeta.append(spanBook);
+ 	spanBook.append(spanIcon);
+ 	aItem.append(imgUrl);
+ 
+ 	//TODO
+ 	$('.list-recipes').append(aItem);
+ }
 }
 
 
